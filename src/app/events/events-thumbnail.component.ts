@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: 'event-thumbnail',
@@ -24,8 +24,19 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
   </div>
   `,
   styles: [`
-    .thumbnail { min-height: 210px; }
-    .pad-left { margin-left: 10px; }
+
+    .green {
+      color: #003300 !important;
+    }
+
+    .thumbnail {
+      min-height: 210px;
+    }
+
+    .pad-left {
+      margin-left: 10px;
+    }
+
     `]
 })
 
