@@ -7,10 +7,10 @@ import { Component, Input } from "@angular/core";
     <div class="bg-light bg-gradient-light text-secondary p-4">
       <h2>{{event.name}}</h2>
       <div>Date: {{event.date}}</div>
-      <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
-        Time: {{event.time}}
-        <span *ngSwitch="'8:00 am'">(Early)</span>
-        <span *ngSwitch="'10:00 am'">(Late)</span>
+     <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
+        Time: {{event?.time}}
+        <span *ngSwitchCase="'8:00 am'">(Early)</span>
+        <span *ngSwitchCase="'10:00 am'">(Late)</span>
         <span *ngSwitchDefault>(Normal)</span>
       </div>
       <div>Price: \${{event.price}}</div>
@@ -68,5 +68,6 @@ export class EventsThumbnailComponent {
       red: isLateStart,
       blue: isNormalStart,
     }
+
   }
 }
