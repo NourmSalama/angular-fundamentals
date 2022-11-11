@@ -3,15 +3,15 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class EventServices {
   getEvents() {
-    return EVENTS;
+    return events;
   }
 
   getEvent(id: number) {
-    return EVENTS.find(event => event.id === id)
+    return events.find(event => event.id === id)
   }
 }
 
-const EVENTS = [
+const events = [
   {
     id: 1,
     name: 'Angular Connect',
