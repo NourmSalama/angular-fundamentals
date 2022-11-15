@@ -3,17 +3,21 @@ import { appRoutes } from "./routes";
 import { BrowserModule } from '@angular/platform-browser';
 import { EventsAppComponent } from './events-app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { EventsListComponent } from './events/events.list.component';
-import { EventsThumbnailComponent } from './events/events-thumbnail.component';
-import { EventDetailsComponent } from "./events/shared/event-details/event-details.componets";
 import { NavBarComponent } from './nav/navbar.component';
-import { EventServices} from "./events/shared/event.service";
 import { ToastrService } from "./common/toastr.service";
 import { RouterModule } from "@angular/router";
-import { CreateEventComponent } from "./create-event.component";
 import { Error404Component } from "./errors/404.components";
-import { EventRouteActivator } from "./events/shared/event-details/event-route-activator.service";
-import { EventListResolver } from "./events/event-list-resolver.service";
+
+// Events imports
+import {
+  EventsListComponent,
+  EventsThumbnailComponent,
+  EventDetailsComponent,
+  EventServices,
+  EventRouteActivator,
+  EventListResolver,
+  CreateEventComponent
+} from './events';
 
 @NgModule({
   imports: [
@@ -45,8 +49,7 @@ import { EventListResolver } from "./events/event-list-resolver.service";
   ]
 })
 
-export class AppModule {
-}
+export class AppModule {}
 
 
 export function checkDirtyState(component: CreateEventComponent) {
