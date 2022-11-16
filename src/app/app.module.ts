@@ -7,10 +7,9 @@ import { NavBarComponent } from './nav/navbar.component';
 import { ToastrService } from "./common/toastr.service";
 import { RouterModule } from "@angular/router";
 import { Error404Component } from "./errors/404.components";
+import { AuthService } from "./user/auth.service";
 
-// Events imports
-import {
-  EventsListComponent,
+import {EventsListComponent,
   EventThumbnailComponent,
   EventDetailsComponent,
   EventServices,
@@ -39,6 +38,7 @@ import {
     ToastrService,
     EventListResolver,
     EventRouteActivator,
+    AuthService,
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
