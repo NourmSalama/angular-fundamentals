@@ -11,7 +11,7 @@ import { Error404Component } from "./errors/404.components";
 // Events imports
 import {
   EventsListComponent,
-  EventsThumbnailComponent,
+  EventThumbnailComponent,
   EventDetailsComponent,
   EventServices,
   EventRouteActivator,
@@ -28,7 +28,7 @@ import {
   declarations: [
     EventsAppComponent,
     EventsListComponent,
-    EventsThumbnailComponent,
+    EventThumbnailComponent,
     EventDetailsComponent,
     NavBarComponent,
     CreateEventComponent,
